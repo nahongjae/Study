@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>test4</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+<context-param>
+<description>초기화파라미터</description>
+<param-name>이름</param-name>
+<param-value>값</param-value>
+</context-param>
+<context-param>
+<param-name>checkLevel</param-name>
+<param-value>5</param-value>
+</context-param>
+<servlet>
+<servlet-name>nowServlet</servlet-name>
+<servlet-class>day01.NowServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>nowServlet</servlet-name>
+<url-pattern>/now</url-pattern>
+</servlet-mapping>
+
+<error-page>
+<error-code>404</error-code>
+<location>/Exam4/error/error404.jsp</location>
+</error-page>
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>/Exam3/view/*</url-pattern>
+			<include-prelude>/Exam3/common/variable.jspf</include-prelude>
+			<include-coda>/Exam3/common/footer.jspf</include-coda>
+		</jsp-property-group>
+	</jsp-config>
+	
+</web-app>
